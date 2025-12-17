@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="de" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demokratie in Athen, Finale Lernplakatt??</title>
+
+    <script src="/_sdk/element_sdk.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap"; rel="stylesheet">
+
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        .timeline-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            transform: translateY(-50%);
+        }
+
+        .timeline-event {
+            transition: transform 0.3s ease;
+        }
+        .timeline-event:hover {
+            transform: scale(1.05);
+        }
+
+        .concept-card {
+            transition: all 0.3s ease;
+        }
+        .concept-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+    </style>
+
+    <style>@view-transition {navigation: auto;}</style>
+    <script src="/_sdk/data_sdk.js"></script>
+</head>
+
+<body class="h-full w-full overflow-auto bg-gradient-to-br from-amber-50 to-orange-100">
+
+<div id="app" class="w-full min-h-full p-8">
+
+    <!-- Header -->
+    <header class="text-center mb-12">
+        <h1 id="main-title" class="text-6xl font-bold mb-4 text-amber-900" style="font-family: 'Playfair Display', serif;">
+            Das antike Griechenland
+        </h1>
+        <p class="text-xl text-amber-800">Von der Polis zur Demokratie: Eine historische Reise</p>
+    </header>
+
+    <!-- Zeitstrahl Section -->
+    <section class="mb-16 bg-white rounded-2xl shadow-xl p-8">
+        <h2 id="timeline-title" class="text-4xl font-bold text-center mb-12 text-amber-900" style="font-family: 'Playfair Display', serif;">
+            Historischer Zeitstrahl
+        </h2>
+
+        <div class="relative" style="height: 400px;">
+            <div class="timeline-line bg-gradient-to-r from-blue-600 via-purple-600 to-red-600"></div>
+
+            <!-- Event Solon -->
+            <div class="timeline-event absolute" style="left: 5%; top: 15%;">
+                <div class="bg-blue-600 text-white rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-lg">
+                    <div class="text-2xl font-bold">594</div>
+                    <div class="text-sm font-semibold">v.Chr.</div>
+                </div>
+                <div class="mt-4 bg-blue-100 p-4 rounded-lg shadow-md w-48">
+                    <h3 class="font-bold text-blue-900 mb-2">Solons Reformen</h3>
+                    <ul class="text-sm text-blue-800">
+                        <li>Ende der Schuldknechtschaft</li>
+                        <li>Timokratie etabliert</li>
+                        <li>Burgereinteilung nach Vermogen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Event Kleisthenes -->
+            <div class="timeline-event absolute" style="left: 25%; top: 60%;">
+                <div class="bg-purple-600 text-white rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-lg">
+                    <div class="text-2xl font-bold">508</div>
+                    <div class="text-sm font-semibold">v.Chr.</div>
+                </div>
+                <div class="mt-4 bg-purple-100 p-4 rounded-lg shadow-md w-48">
+                    <h3 class="font-bold text-purple-900 mb-2">Demokratie entsteht</h3>
+                    <ul class="text-sm text-purple-800">
+                        <li>Isonomie</li>
+                        <li>Ostrakismos eingefuhrt</li>
+                        <li>10 Phylen geschaffen</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Event Perserkriege -->
+            <div class="timeline-event absolute" style="left: 45%; top: 15%;">
+                <div class="bg-red-600 text-white rounded-full w-32 h-32 flex items-center justify-center shadow-lg flex-col">
+                    <div class="text-2xl font-bold">490 bis 479</div>
+                    <div class="text-sm font-semibold">v.Chr.</div>
+                </div>
+                <div class="mt-4 bg-red-100 p-4 rounded-lg shadow-md w-52">
+                    <h3 class="font-bold text-red-900 mb-2">Perserkriege</h3>
+                    <ul class="text-sm text-red-800">
+                        <li>Marathon (490)</li>
+                        <li>Salamis (480)</li>
+                        <li>Athen fuhrt Widerstand</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Event Perikles -->
+            <div class="timeline-event absolute" style="left: 65%; top: 60%;">
+                <div class="bg-yellow-600 text-white rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-lg">
+                    <div class="text-2xl font-bold">461 bis 429</div>
+                    <div class="text-sm font-semibold">v.Chr.</div>
+                </div>
+                <div class="mt-4 bg-yellow-100 p-4 rounded-lg shadow-md w-52">
+                    <h3 class="font-bold text-yellow-900 mb-2">Perikles & Blutezeit</h3>
+                    <ul class="text-sm text-yellow-800">
+                        <li>Attischer Seebund</li>
+                        <li>Theten erhalten Burgerrechte</li>
+                        <li>Kulturelle Hochphase</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Event Peloponnesischer Krieg -->
+            <div class="timeline-event absolute" style="left: 85%; top: 15%;">
+                <div class="bg-gray-700 text-white rounded-full w-32 h-32 flex flex-col items-center justify-center shadow-lg">
+                    <div class="text-2xl font-bold">431–404</div>
+                    <div class="text-sm font-semibold">v.Chr.</div>
+                </div>
+                <div class="mt-4 bg-gray-200 p-4 rounded-lg shadow-md w-56">
+                    <h3 class="font-bold text-gray-900 mb-2">Peloponnesischer Krieg</h3>
+                    <ul class="text-sm text-gray-800">
+                        <li>Athen vs. Sparta</li>
+                        <li>Ende der athenischen Vormacht</li>
+                        <li>Demokratie zeitweise ausgesetzt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <p style="height: 65px">
+    </p>
+    <!-- Staatsformen & Gesellschaft -->
+    <section class="mb-16" style="margin-top: '20px'">
+        <h2 id="concepts-title" class="text-4xl font-bold text-center mb-10 text-amber-900" style="font-family: 'Playfair Display', serif;">
+            Staatsformen und Gesellschaft
+        </h2>
+            <p style="height: 25px">
+    </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Staatsformen -->
+            <div class="concept-card bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl p-6 shadow-lg text-white">
+                <h3 class="text-2xl font-bold mb-4">Staatsformen</h3>
+                <div class="space-y-3">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Tyrannis</h4>
+                        <p class="text-sm">Alleinherrschaft durch Gewalt</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Oligarchie</h4>
+                        <p class="text-sm">Herrschaft weniger Reicher</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Timokratie</h4>
+                        <p class="text-sm">Nach Vermogen geordnet</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Demokratie</h4>
+                        <p class="text-sm">Herrschaft des Volkes (Athen)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gesellschaft -->
+            <div class="concept-card bg-gradient-to-br from-purple-500 to-purple-700 rounded-xl p-6 shadow-lg text-white">
+                <h3 class="text-2xl font-bold mb-4">Gesellschaft</h3>
+                <div class="space-y-3">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Vollburger</h4>
+                        <p class="text-sm">Manner mit beiden Eltern als Burger</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Hopliten</h4>
+                        <p class="text-sm">Schwerbewaffnete Infanterie</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Theten</h4>
+                        <p class="text-sm">Armste Burgerschicht</p>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-3">
+                        <h4 class="font-bold">Sklaven</h4>
+                        <p class="text-sm">Grundlage der Wirtschaft</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Athen & Sparta -->
+            <div class="concept-card bg-gradient-to-br from-red-500 to-red-700 rounded-xl p-6 shadow-lg text-white">
+                <h3 class="text-2xl font-bold mb-4">Zwei Poleis</h3>
+
+                <div class="space-y-4">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-bold text-xl mb-2">Athen</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>Demokratie</li>
+                            <li>Handel und Seefahrt</li>
+                            <li>Kultur und Philosophie</li>
+                            <li>Los-Verfahren</li>
+                            <li>Ostrakismos</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <h4 class="font-bold text-xl mb-2">Sparta</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>Militarstaat</li>
+                            <li>Kriegerische Erziehung</li>
+                            <li>Landwirtschaft</li>
+                            <li>Zwei Konige</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schlusselkonzepte -->
+    <section class="mb-16">
+        <h2 class="text-4xl font-bold text-center mb-10 text-amber-900" style="font-family: 'Playfair Display', serif;">
+            Schlusselkonzepte
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500">
+                <h3 class="text-xl font-bold text-green-700 mb-2">Polis</h3>
+                <p class="text-gray-700">Grundlegende Stadtstaatstruktur des antiken Griechenlands</p>
+            </div>
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+                <h3 class="text-xl font-bold text-blue-700 mb-2">Isonomie</h3>
+                <p class="text-gray-700">Gleichheit vor dem Gesetz in der Demokratie Athens</p>
+            </div>
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500">
+                <h3 class="text-xl font-bold text-red-700 mb-2">Los-Verfahren</h3>
+                <p class="text-gray-700">Amtervergabe per Los zur Vermeidung von Korruption</p>
+            </div>
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500">
+                <h3 class="text-xl font-bold text-orange-700 mb-2">Ostrakismos</h3>
+                <p class="text-gray-700">Scherbengericht zur zeitweiligen Verbannung</p>
+            </div>
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-purple-500">
+                <h3 class="text-xl font-bold text-purple-700 mb-2">Schuldknechtschaft</h3>
+                <p class="text-gray-700">Versklavung bei Schulden – abgeschafft durch Solon</p>
+            </div>
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-teal-500">
+                <h3 class="text-xl font-bold text-teal-700 mb-2">Phyle</h3>
+                <p class="text-gray-700">Die 10 Verwaltungsbezirke nach Kleisthenes</p>
+            </div>
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-yellow-500">
+                <h3 class="text-xl font-bold text-yellow-700 mb-2">Attischer Seebund</h3>
+                <p class="text-gray-700">Bundnis Athens zur Abwehr der Perser</p>
+            </div>
+
+            <div class="concept-card bg-white rounded-xl p-6 shadow-lg border-l-4 border-pink-500">
+                <h3 class="text-xl font-bold text-pink-700 mb-2">Perikles</h3>
+                <p class="text-gray-700">Fuhrende Personlichkeit der athenischen Blutezeit</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zusammenhange -->
+    <section class="bg-white rounded-2xl shadow-xl p-8">
+        <h2 class="text-4xl font-bold text-center mb-8 text-amber-900" style="font-family: 'Playfair Display', serif;">
+            Wichtige Zusammenhange
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <div class="bg-gradient-to-br from-amber-100 to-amber-200 rounded-xl p-6">
+                <h3 class="text-2xl font-bold text-amber-900 mb-4">Aufstieg der Demokratie</h3>
+                <div class="space-y-3 text-amber-900">
+                    <p>1. Schuldknechtschaft belastet Burger</p>
+                    <p>2. Solon schafft sie ab (594 v.Chr.)</p>
+                    <p>3. Kleisthenes fuhrt Isonomie ein (508 v.Chr.)</p>
+                    <p>4. Perserkriege starken die Theten</p>
+                    <p>5. Perikles erweitert Burgerrechte</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-6">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Augenpolitik</h3>
+                <div class="space-y-3 text-blue-900">
+                    <p>Perserkriege: Athen wird Schutzmacht</p>
+                    <p>Attischer Seebund: Ausbau der Macht</p>
+                    <p>Rivalitat mit Sparta verstarkt sich</p>
+                    <p>Peloponnesischer Krieg (431 bis 404)</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-6">
+                <h3 class="text-2xl font-bold text-green-900 mb-4">Demokratische Instrumente</h3>
+                <div class="space-y-3 text-green-900">
+                    <p>Los: Gerechte Amterverteilung</p>
+                    <p>Ostrakismos: Schutz vor Tyrannis</p>
+                    <p>Phylen: Burgerorganisation</p>
+                    <p>Bewertung nach Leistung</p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-red-100 to-red-200 rounded-xl p-6">
+                <h3 class="text-2xl font-bold text-red-900 mb-4">Grenzen der Demokratie</h3>
+                <div class="space-y-3 text-red-900">
+                    <p>Nur freie Manner sind Burger</p>
+                    <p>Frauen ohne politische Rechte</p>
+                    <p>Sklaverei als Grundlage</p>
+                    <p>Metoken ausgeschlossen</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center mt-12 text-amber-800">
+        <p class="text-lg font-semibold">Lernplakat: Das antike Griechenland (ca. 600–400 v.Chr.)</p>
+    </footer>
+</div>
+
+</body>
+</html>
